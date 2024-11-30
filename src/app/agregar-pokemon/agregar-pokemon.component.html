@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Agregar Nuevo Pokémon</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="number" id="id" [(ngModel)]="pokemon.id" name="id" required class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="pokemon.nombre" name="nombre" required class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" [(ngModel)]="pokemon.altura" name="altura" required class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="peso">Peso:</label>
+        <input type="number" id="peso" [(ngModel)]="pokemon.peso" name="peso" required class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" [(ngModel)]="pokemon.tipo" name="tipo" required class="form-control">
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Agregar Pokémon</button>
+    </form>
+  </div>
+  
