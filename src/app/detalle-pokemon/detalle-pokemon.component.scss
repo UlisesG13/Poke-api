@@ -1,21 +1,78 @@
+/* Contenedor principal */
 .detalle-container {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px #ffffff;
+  font-family: 'Press Start 2P', sans-serif;
+  text-align: center;
+}
+
+/* Estilo del nombre del Pokémon */
+.pokemon-nombre {
+  font-size: 1.8rem;
+  color: #3b4cca;
+  text-shadow: 2px 2px #ffcb05;
+  margin-bottom: 20px;
+}
+
+/* Estilo de la información del Pokémon */
+.pokemon-info p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+.pokemon-info strong {
+  color: #3b4cca;
+}
+
+.pokemon-info span {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Estilo del botón */
+.btn-regresar {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #3b4cca;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+}
+
+.btn-regresar:hover {
+  background-color: #ffcb05;
+  color: #3b4cca;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 10px #b1b1b1, -3px -3px 10px #ffffff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .detalle-container {
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
   }
-  
-  button {
-    margin-top: 10px;
+
+  .pokemon-nombre {
+    font-size: 1.5rem;
+  }
+
+  .pokemon-info p {
+    font-size: 0.9rem;
+  }
+
+  .btn-regresar {
+    font-size: 0.9rem;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+}

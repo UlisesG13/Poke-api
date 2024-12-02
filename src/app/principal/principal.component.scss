@@ -1,52 +1,107 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #3b4cca, #ffcb05);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Press Start 2P', sans-serif;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  h1 {
-    text-align: center;
-    color: #333;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .pokemon-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .card {
-    width: 250px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .card h3 {
-    margin: 0;
-    color: #444;
-  }
-  
-  .card p {
-    margin: 10px 0;
-    color: #666;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+h1 {
+  text-align: center;
+  color: #ffcb05;
+  text-shadow: 2px 2px #3b4cca;
+  margin-bottom: 20px;
+}
+
+.actions {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.actions .btn {
+  margin: 0 10px;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #e5e5e5, #ffffff);
+  box-shadow: 10px 10px 20px #d1d1d1, -10px -10px 20px #ffffff;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 15px 15px 25px #c1c1c1, -15px -15px 25px #ffffff;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: #3b4cca;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+button {
+  background-color: #ffcb05;
+  color: #3b4cca;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #3b4cca;
+  color: #ffcb05;
+  transform: scale(1.1);
+}
+
+.card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  background-color: #e63946;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #d62839;
+}

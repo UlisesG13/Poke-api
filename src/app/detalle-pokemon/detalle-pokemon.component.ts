@@ -24,6 +24,7 @@ export class DetallePokemonComponent {
     if (pokemonId) {
       this.pokemonService.getPokemonById(+pokemonId).subscribe((data) => {
         this.pokemon = data;
+        
       });
     }
   }

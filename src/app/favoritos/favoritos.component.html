@@ -1,16 +1,15 @@
-<div class="container">
-    <h1>Pokémon Favoritos</h1>
-    <div *ngIf="favorites.length > 0; else noFavorites">
-      <div *ngFor="let pokemon of favorites" class="card">
-        <h3>{{ pokemon.nombre }}</h3>
-        <p><strong>Tipo:</strong> {{ pokemon.tipo }}</p>
-        <p><strong>Altura:</strong> {{ pokemon.altura }} m</p>
-        <p><strong>Peso:</strong> {{ pokemon.peso }} kg</p>
-      </div>
+<div class="favorites-container">
+  <h1>✨ Pokémon Favoritos ✨</h1>
+  <div *ngIf="favorites.length > 0; else noFavorites" class="favorites-grid">
+    <div *ngFor="let pokemon of favorites" class="card">
+      <h3>{{ pokemon.nombre }}</h3>
+      <p><strong>Tipo:</strong> <span>{{ pokemon.tipo }}</span></p>
+      <p><strong>Altura:</strong> <span>{{ pokemon.altura }} m</span></p>
+      <p><strong>Peso:</strong> <span>{{ pokemon.peso }} kg</span></p>
     </div>
-  
-    <ng-template #noFavorites>
-      <p>No tienes Pokémon favoritos.</p>
-    </ng-template>
   </div>
-  
+
+  <ng-template #noFavorites>
+    <p class="no-favorites-message">No tienes Pokémon favoritos aún. 🐾</p>
+  </ng-template>
+</div>

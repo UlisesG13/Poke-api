@@ -1,38 +1,38 @@
 <div class="container">
-    <h1>Pokémon List</h1>
-    <div class="pokemon-list">
-      <div *ngFor="let pokemon of pokemons" class="card">
-        <h3>{{ pokemon.nombre | uppercase }}</h3>
-        <p><strong>Tipo:</strong> {{ pokemon.tipo | replaceLetters | capitalize }}</p>
-        <p><strong>Altura:</strong> {{ pokemon.altura }} m</p>
-        <p><strong>Batallas:</strong> {{ pokemon.peso }} kg</p>
-        <button (click)="deletePokemonFromAll(pokemon.id)" class="delete-btn">
-            Eliminar de Todos
-          </button>
-        <button routerLink="/pokemon/{{ pokemon.id }}">Ver Detalles</button>
-      <button [routerLink]="'/editar-pokemon/' + pokemon.id">Editar</button>
-
-        <button (click)="addToFavorites(pokemon.id)">Agregar a Favoritos</button>
-      </div>
-      <button [routerLink]="'/agregar-pokemon'" class="btn btn-primary">
-        Agregar Pokémon
-      </button>
-      <button [routerLink]="'/pokebola'" class="btn btn-primary">
-        Ver Favoritos
-      </button>
-    </div>
-  
-    <h1>Favoritos</h1>
-    <div class="pokemon-list">
-      <div *ngFor="let pokemon of favorites" class="card">
-        <h3>{{ pokemon.nombre }}</h3>
-        <p><strong>Tipo:</strong> {{ pokemon.tipo }}</p>
-        <p><strong>Altura:</strong> {{ pokemon.altura }} m</p>
-        <p><strong>Peso:</strong> {{ pokemon.peso }} kg</p>
-        <button routerLink="/pokemon/{{ pokemon.id }}">Ver Detalles</button>
-        <button (click)="removeFromFavorites(pokemon.id)">Quitar de Favoritos</button>
-      </div>
-    </div>
-   
+  <h1>⚡ Lista de Pokémon ⚡</h1>
+  <div class="actions">
+    <button [routerLink]="'/agregar-pokemon'" class="btn btn-primary">
+      ➕ Agregar Pokémon
+    </button>
+    <button [routerLink]="'/pokebola'" class="btn btn-primary">
+      🏅 Ver Pokedex
+    </button>
   </div>
-  
+  <div class="pokemon-list">
+    <div *ngFor="let pokemon of pokemons" class="card">
+      <h3>{{ pokemon.nombre | uppercase }}</h3>
+      <p><strong>Tipo:</strong> {{ pokemon.tipo | replaceLetters | capitalize }}</p>
+      <p><strong>Altura:</strong> {{ pokemon.altura }} m</p>
+      <p><strong>Peso:</strong> {{ pokemon.peso }} kg</p>
+      <div class="card-buttons">
+        <button routerLink="/pokemon/{{ pokemon.id }}">🔍 Ver Detalles</button>
+        <button [routerLink]="'/editar-pokemon/' + pokemon.id">✏️ Editar</button>
+        <button (click)="addToFavorites(pokemon.id)">❤️ Agregar a Favoritos</button>
+        <button (click)="deletePokemonFromAll(pokemon.id)" class="delete-btn">❌ Eliminar</button>
+      </div>
+    </div>
+  </div>
+  <h1>✨ Favoritos ✨</h1>
+  <div class="pokemon-list">
+    <div *ngFor="let pokemon of favorites" class="card">
+      <h3>{{ pokemon.nombre }}</h3>
+      <p><strong>Tipo:</strong> {{ pokemon.tipo }}</p>
+      <p><strong>Altura:</strong> {{ pokemon.altura }} m</p>
+      <p><strong>Peso:</strong> {{ pokemon.peso }} kg</p>
+      <div class="card-buttons">
+        <button routerLink="/pokemon/{{ pokemon.id }}">🔍 Ver Detalles</button>
+        <button (click)="removeFromFavorites(pokemon.id)">💔 Quitar de Favoritos</button>
+      </div>
+    </div>
+  </div>
+</div>

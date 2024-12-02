@@ -1,0 +1,75 @@
+/* Página de edición */
+.edit-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3b4cca, #ffcb05);
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  /* Contenido */
+  .edit-content {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .edit-content h2 {
+    color: #3b4cca;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de formulario */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #3b4cca;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    border-color: #3b4cca;
+    outline: none;
+    box-shadow: 0 0 5px rgba(59, 76, 202, 0.5);
+  }
+  
+  /* Botón */
+  button {
+    background-color: #ffcb05;
+    color: #3b4cca;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #ffd733;
+    transform: scale(1.05);
+  }
+  

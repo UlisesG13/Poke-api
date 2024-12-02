@@ -1,8 +1,9 @@
 <div class="detalle-container" *ngIf="pokemon">
-    <h1>{{ pokemon.nombre }}</h1>
-    <p><strong>Tipo:</strong> {{ pokemon.tipo }}</p>
-    <p><strong>Altura:</strong> {{ pokemon.altura }} m</p>
-    <p><strong>Peso:</strong> {{ pokemon.peso }} kg</p>
-    <button routerLink="/">Regresar</button>
+  <h1 class="pokemon-nombre">✨ {{ pokemon.nombre }} ✨</h1>
+  <div class="pokemon-info">
+    <p><strong>Tipo:</strong> <span>{{ pokemon.tipo }}</span></p>
+    <p><strong>Altura:</strong> <span>{{ pokemon.altura }} m</span></p>
+    <p><strong>Peso:</strong> <span>{{ pokemon.peso }} kg</span></p>
   </div>
-  
+  <button class="btn-regresar" routerLink="/">⬅️ Regresar</button>
+</div>

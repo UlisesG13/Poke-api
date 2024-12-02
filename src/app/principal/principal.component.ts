@@ -17,7 +17,7 @@ import { UpperCasePipe } from '@angular/common';
 export class PrincipalComponent {
   pokemons: Pokemon[] = [];
   favorites: Pokemon[] = [];
-  newPokemon: Pokemon = { id: 0, nombre: '', altura: 0, peso: 0, tipo: '' };
+  newPokemon: Pokemon = { id: 0, nombre: '', altura: 0, peso: 0, tipo: ''};
 
 
   constructor(private pokemonService: PokemonService) {}
@@ -66,11 +66,6 @@ export class PrincipalComponent {
     });
   }
   
-
-
-  
-
-  // Agregar un Pokémon a favoritos
   // Agregar un Pokémon a favoritos
   addToFavorites(pokemonId: number): void {
   if (this.favorites.length >= 5) {
@@ -84,7 +79,6 @@ export class PrincipalComponent {
 }
 
 
-  // Quitar un Pokémon de favoritos
   removeFromFavorites(pokemonId: number): void {
     this.pokemonService.removeFromFavorites(pokemonId).subscribe(() => {
       this.favorites = this.favorites.filter(
@@ -94,10 +88,10 @@ export class PrincipalComponent {
   }
 
   addPokemon(): void {
-    this.newPokemon.id = this.pokemons.length + 1; // Generar ID automáticamente
+    this.newPokemon.id = this.pokemons.length + 1; 
     this.pokemonService.createPokemon(this.newPokemon).subscribe(() => {
       this.loadPokemons();
-      this.newPokemon = { id: 0, nombre: '', altura: 0, peso: 0, tipo: '' }; // Limpiar formulario
+      this.newPokemon = { id: 0, nombre: '', altura: 0, peso: 0, tipo: '' }; 
     });
   }
 

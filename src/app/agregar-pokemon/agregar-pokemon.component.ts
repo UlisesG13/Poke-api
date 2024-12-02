@@ -15,7 +15,7 @@ export class AgregarPokemonComponent { pokemon = {
   nombre: '',
   altura: 0,
   peso: 0,
-  tipo: ''
+  tipo: '',
 };
 
 constructor(private pokemonService: PokemonService, private router: Router) {}
